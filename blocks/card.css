@@ -4,7 +4,7 @@
   gap: 40px 20px;
   border-bottom: 1px solid;
   justify-content: center;
-  background-color: fcf5e5;
+  background-color: #fcf5e5;
   padding: 0 0 40px;
   margin: 20px 0 0;
 }
@@ -83,7 +83,7 @@ p {
     gap: 40px 20px;
     border-bottom: 1px solid;
     justify-content: center;
-    background-color: bisque;
+    background-color: #fcf5e5;
     padding: 0 0 20px;
   }
 }
@@ -102,7 +102,7 @@ p {
     gap: 20px 0;
     border-bottom: 1px solid;
     justify-content: center;
-    background-color: bisque;
+    background-color: #fcf5e5;
     padding: 0 0 20px;
   }
 

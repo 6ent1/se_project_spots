@@ -7,7 +7,7 @@
   flex-direction: row;
   justify-content: start;
   border-bottom: 1px solid;
-  background-color: fcf5e5;
+  background-color: #fcf5e5;
   min-width: 420px;
 }
 
@@ -85,7 +85,7 @@
   .profile {
     box-sizing: border-box;
     padding: 20px 16px 20px;
-    margin: 0 0 20px;
+    margin: 0;
     max-width: 1280px;
     min-width: 320px;
     display: flex;
