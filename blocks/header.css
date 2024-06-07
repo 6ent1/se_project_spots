@@ -1,0 +1,7 @@
+.header {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  height: 46px;
+  z-index: 1;
+}
