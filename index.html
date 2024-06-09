@@ -3,125 +3,128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Genti T." />
+    <meta name="keywords" content="HTML, CSS, FLEX GRID" />
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./pages/index.css" />
-    <title>Spots App</title>
+    <title>Spots</title>
   </head>
 
-  <body class="page">
-    <!-- <div class="page"> -->
-    <header class="header">
-      <img src="./images/Logo.svg" alt="Website logo" class="logo" />
-    </header>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img src="./images/Logo.svg" alt="Spots logo" class="header__logo" />
+      </header>
 
-    <main class="content">
-      <section class="profile">
-        <img src="./images/avatar.jpg" alt="avatar" class="profile__pic" />
-        <div class="profile__info">
-          <h1 class="profile__name">Bessie Coleman</h1>
-          <p class="profile__profession">Civil Aviator</p>
-          <button class="button__edit">
-            <img src="./images/edit.png" alt="pencil icon" />
-            Edit Profile
+      <main class="content">
+        <section class="profile page__section">
+          <img
+            src="./images/avatar.jpg"
+            alt="User's avatar"
+            class="profile__avatar"
+          />
+          <div class="profile__info">
+            <h1 class="profile__name">
+              Aliaune Damala Bouga Time Bongo Puru Nacka Lu Lu Lu Badara Akon
+              Badara Akon
+            </h1>
+            <p class="profile__description">
+              Known mononymously as Akon (/ˈeɪkɒn/), is a Senegalese-American
+              singer, record producer, and entrepreneur. An influential figure
+              in modern world,and entrepreneur.
+            </p>
+            <button type="button" class="profile__edit-btn">
+              <img src="./images/pencil.svg" alt="pencil icon" />
+              Edit Profile
+            </button>
+          </div>
+          <button type="button" class="profile__add-btn">
+            <img src="./images/plus.svg" alt="pencil icon" />
+            New Post
           </button>
-        </div>
-        <button class="button__add-new">+ New Post</button>
-      </section>
+        </section>
 
-      <section class="cards">
-        <ul class="cards__list">
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-              alt="photo by moritz feldmann from pexels"
-            />
-            <div class="card__bottom">
-              <p class="card__name">Val Thorens</p>
-              <button class="card__like-button">
-                <img src="./images/like.png" alt="Heart symbol" />
-              </button>
-            </div>
-          </li>
+        <section class="cards page__section">
+          <ul class="cards__list">
+            <li class="card">
+              <img
+                class="card__image"
+                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="photo by moritz feldmann from pexels"
+              />
+              <div class="card__content">
+                <h2 class="card__name">Val Thorens</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
 
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/2-photo-by-ceiline-from-pexels.jpg"
-              alt="photo by moritz feldmann from pexels"
-            />
-            <div class="card__bottom">
-              <p class="card__name">Restaurant terrace</p>
-              <button class="card__like-button">
-                <img src="./images/like.png" alt="Heart symbol" />
-              </button>
-            </div>
-          </li>
+            <li class="card">
+              <img
+                class="card__image"
+                src="./images/2-photo-by-ceiline-from-pexels.jpg"
+                alt="photo by moritz feldmann from pexels"
+              />
+              <div class="card__content">
+                <h2 class="card__name">Restaurant terrace</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
 
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-              alt="photo by moritz feldmann from pexels"
-            />
-            <div class="card__bottom">
-              <p class="card__name">An outdoor cafe</p>
-              <button class="card__like-button">
-                <img src="./images/like.png" alt="Heart symbol" />
-              </button>
-            </div>
-          </li>
+            <li class="card">
+              <img
+                class="card__image"
+                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
+                alt="photo by moritz feldmann from pexels"
+              />
+              <div class="card__content">
+                <h2 class="card__name">An outdoor cafe</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
 
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-              alt="photo by moritz feldmann from pexels"
-            />
-            <div class="card__bottom">
-              <p class="card__name">
-                A very long bridge, over the forest : A very long bridge, over
-                the forest : A very long bridge, over the forest : A very long
-                bridge, over the forest :
-              </p>
-              <button class="card__like-button">
-                <img src="./images/like.png" alt="Heart symbol" />
-              </button>
-            </div>
-          </li>
+            <li class="card">
+              <img
+                class="card__image"
+                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
+                alt="photo by moritz feldmann from pexels"
+              />
+              <div class="card__content">
+                <h2 class="card__name">
+                  A very long bridge, over the forest : A very long bridge, over
+                  the forest : A very long bridge, over the forest : A very long
+                  bridge, over the forest :
+                </h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
 
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-              alt="photo by moritz feldmann from pexels"
-            />
-            <div class="card__bottom">
-              <p class="card__name">Tunnel with morning light</p>
-              <button class="card__like-button">
-                <img src="./images/like.png" alt="Heart symbol" />
-              </button>
-            </div>
-          </li>
+            <li class="card">
+              <img
+                class="card__image"
+                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+                alt="photo by moritz feldmann from pexels"
+              />
+              <div class="card__content">
+                <h2 class="card__name">Tunnel with morning light</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
 
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-              alt="photo by moritz feldmann from pexels"
-            />
-            <div class="card__bottom">
-              <p class="card__name">Mountain house</p>
-              <button class="card__like-button">
-                <img src="./images/like.png" alt="Heart symbol" />
-              </button>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section class="footer">2023 © Spots</section>
-    </main>
-
-    <!-- </div> -->
+            <li class="card">
+              <img
+                class="card__image"
+                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="photo by moritz feldmann from pexels"
+              />
+              <div class="card__content">
+                <h2 class="card__name">Mountain house</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <section class="footer page__section">2023 © Spots</section>
+    </div>
   </body>
 </html>

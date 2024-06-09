@@ -1,21 +1,28 @@
-# Project 3: Spots
+# Spots App
 
-### Overview  
+## A social media app where users can share and like pictures of each-other about places that they have visited.
 
-* Intro  
-* Figma  
-* Images  
-  
+## Tech Stack
+
+- HTML
+- CSS
+- Responsive design - using Flexbox and grid
+
 **Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+
+This project is made so all the elements are displayed correctly on popular screen sizes. For this, flexbox and grid was used. In addition, media queries were used, to make elements change size to look better on smaller devices.
+
+**Images**
+
+_Using a flexbox for the profile section with horizontal margins 'auto' so it is always centered to the page_
+![Cards List small](./images/Screenshots/profile.png)
+
+_Cards List using grid and columns template autofit for fitting images automatically on each row with a width of 413px_
+![Cards List](./images/Screenshots/cards_list.png)
+
+_Using media query to make image size of cards smaller for devices with screen sizes up to 627px_
+![Cards List small](./images/Screenshots/cards_list_small.png)
+
+**GitHub Pages**
+
+Check out my work on GitHub Pages by clicking this [link](https://6ent1.github.io/se_project_spots/).

@@ -1,26 +1,5 @@
 .content {
-  display: flex;
-  flex-direction: column;
-  background-color: #fcf5e5;
   max-width: 1280px;
-  min-width: 320px;
-  margin: 0;
-  padding: 34px 80px 60px;
-  justify-content: center;
-}
-
-@media screen and (max-width: 320px) {
-  .content {
-    display: flex;
-    flex-direction: column;
-    background-color: #fcf5e5;
-    min-width: 320px;
-    margin: 0;
-    padding: 34px 0 60px;
-    justify-content: center;
-  }
-
-  .content {
-    min-width: 320px;
-  }
+  margin: 0 auto;
+  padding: 0 20px;
 }
