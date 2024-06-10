@@ -8,13 +8,14 @@
 }
 
 .profile__add-btn {
+  cursor: pointer;
   margin: auto 0 0 auto;
   border-radius: 8px;
   height: 52px;
-  width: 137px;
+  width: 157px;
   background-color: #212121;
   color: #fff;
-  font-family: "Poppins";
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
@@ -40,13 +41,11 @@
 .profile__name {
   padding: 0;
   margin: 0;
-
-  font-family: "Poppins";
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 32px;
   text-align: left;
-
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -57,13 +56,12 @@
 
 .profile__description {
   margin-top: 12px;
-  font-family: "Poppins";
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
   text-align: left;
   color: rgba(33, 33, 33, 0.7);
-
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -73,6 +71,7 @@
 }
 
 .profile__edit-btn {
+  cursor: pointer;
   color: #212121;
   opacity: 0.7;
   margin-top: auto;
@@ -106,7 +105,7 @@
     height: 80px;
     border-radius: 8px;
     margin-right: 0;
-    padding-bottom: 12px;
+    margin-bottom: 12px;
   }
 
   .profile__info {
@@ -120,6 +119,7 @@
   }
 
   .profile__add-btn {
+    width: 288px;
     margin: 0 auto;
   }
 
