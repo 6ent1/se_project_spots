@@ -26,3 +26,7 @@ _Using media query to make image size of cards smaller for devices with screen s
 **GitHub Pages**
 
 Check out my work on GitHub Pages by clicking this [link](https://6ent1.github.io/se_project_spots/).
+
+**Project Video**
+
+A quick video explanation of this project can be found [here](https://drive.google.com/file/d/1P_qcVYHCSAUZiFHeprxc7nZ6Y3rm7tTy/view?usp=sharing).
