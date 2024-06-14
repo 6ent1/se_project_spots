@@ -17,36 +17,6 @@
       </header>
 
       <main class="content">
-        <div class="modal__container">
-          <fieldset class="form__field">
-            <div class="modal__top">
-              <h2 class="title">Edit Profile</h2>
-              <button type="button" class="close__btn">
-                <img src="./images/closebutton.svg" alt="close button" />
-              </button>
-            </div>
-            <label class="form__label">
-              Name<input
-                id="name"
-                type="text"
-                class="form__input"
-                placeholder="Type your name"
-                required
-              />
-            </label>
-            <label class="form__label">
-              Description<input
-                id="name"
-                type="text"
-                class="form__input"
-                placeholder="Describe yourself"
-                required
-              />
-            </label>
-            <button type="submit" class="profile__save-btn">Save</button>
-          </fieldset>
-        </div>
-
         <section class="profile page__section">
           <img
             src="./images/avatar.jpg"
@@ -158,6 +128,39 @@
       <footer class="footer page__section">
         <p class="footer__copyright">2023 © Spots</p>
       </footer>
+
+      <div class="modal modal_opened">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn">
+            <img src="./images/closebutton.svg" alt="close button" />
+          </button>
+          <h2 class="modal__title">Edit Profile</h2>
+
+          <form name="edit-profile" class="modal__form">
+            <label for="name" class="modal__label">
+              Name<input
+                id="name"
+                type="text"
+                class="modal__input"
+                placeholder="Type your name"
+                required
+              />
+            </label>
+
+            <label for="description" class="modal__label">
+              Description<input
+                id="description"
+                type="text"
+                class="modal__input"
+                placeholder="Describe yourself"
+                required
+              />
+            </label>
+
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
     <script defer src="./scripts/index.js"></script>
   </body>
