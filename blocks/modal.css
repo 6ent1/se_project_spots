@@ -1,3 +1,12 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -15,6 +24,7 @@
 }
 
 .modal_opened {
+  animation: fadein 0.5s;
   visibility: visible;
 }
 
@@ -25,6 +35,8 @@
 }
 
 .modal__container {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   background: #fff;
   max-width: 730px;
@@ -33,6 +45,43 @@
   padding: 32px 50px;
   text-align: left;
   position: relative;
+}
+
+.modal__container_type_preview {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: #fff;
+  max-width: 730px;
+  border-radius: 8px;
+  padding: 32px 50px;
+  text-align: left;
+  position: relative;
+  padding: 0;
+  gap: 8px;
+  background: transparent;
+}
+
+.modal__caption {
+  display: flex;
+  padding: 4px 8px;
+  margin: 0 auto 0 0;
+  background-color: #212121;
+  color: #fff;
+  border-radius: 8px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.modal__image {
+  width: 100%;
+  object-fit: cover;
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
 }
 
 .modal__label {
@@ -75,6 +124,14 @@
 
 .modal__close-btn:hover {
   opacity: 1;
+}
+
+.modal__close-btn_type_preview {
+  cursor: pointer;
+  position: absolute;
+  background: transparent url("../images/preview-close.svg");
+  top: 0;
+  right: -52.5px;
 }
 
 .modal__submit-btn {
@@ -127,5 +184,18 @@
 
   .modal__submit-btn {
     width: 100%;
+  }
+
+  .modal__image {
+    width: 100%;
+    object-fit: cover;
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+
+  .modal__close-btn_type_preview {
+    top: -48px;
+    right: 0;
   }
 }
