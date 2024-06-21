@@ -50,6 +50,7 @@
 .modal__container_type_preview {
   display: flex;
   flex-direction: column;
+  align-content: center;
   box-sizing: border-box;
   background: #fff;
   max-width: 730px;
@@ -188,7 +189,7 @@
 
   .modal__image {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     max-width: 80vw;
     max-height: 80vh;
     border-radius: 8px;
@@ -197,5 +198,14 @@
   .modal__close-btn_type_preview {
     top: -48px;
     right: 0;
+  }
+
+  .modal__container_type_preview {
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    padding: 0;
+    gap: 8px;
+    background: transparent;
   }
 }
