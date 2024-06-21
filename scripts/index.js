@@ -73,13 +73,7 @@ function getCardElement(data) {
   const cardNameEl = cardElement.querySelector(".card__name");
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__like-button");
-
-  const cardDeleteBtn = document.querySelectorAll(".card__delete-button");
-  cardDeleteBtn.forEach((cardDeleteButton) => {
-    cardDeleteButton.addEventListener("click", (evt) => {
-      evt.target.closest(".card").remove();
-    });
-  });
+  const cardDeleteButton = cardElement.querySelector(".card__delete-button");
 
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
@@ -87,6 +81,10 @@ function getCardElement(data) {
 
   cardLikeBtn.addEventListener("click", () => {
     cardLikeBtn.classList.toggle("card__like-button_liked");
+  });
+
+  cardDeleteButton.addEventListener("click", (evt) => {
+    evt.target.closest(".card").remove();
   });
 
   cardImageEl.addEventListener("click", () => {
@@ -141,7 +139,6 @@ function handleCardFormSubmit(evt) {
   const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-
   closeModal(cardModal);
   evt.target.reset();
 }
