@@ -106,6 +106,20 @@
   border-color: #838383;
 }
 
+.modal__error {
+  display: block;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: rgba(255, 0, 0, 0.7);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17.6px;
+  text-align: left;
+}
+
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
 .modal__close-btn {
   width: 40px;
   height: 40px;
@@ -144,6 +158,10 @@
   font-weight: 500;
   line-height: 16px;
   text-align: center;
+}
+
+.modal__submit-btn_type-disabled {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 910px) {
