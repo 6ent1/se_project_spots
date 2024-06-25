@@ -65,9 +65,7 @@ const enableValidation = () => {
   });
 };
 
-enableValidation();
-
-const config = {
+const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__button",
@@ -76,4 +74,4 @@ const config = {
   errorClass: "modal__error_visible",
 };
 
-enableValidation(config);
+enableValidation(settings);
