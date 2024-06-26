@@ -103,16 +103,6 @@ modals.forEach((modal) => {
   modal.addEventListener("click", closeModalByOverlay);
 });
 
-function openModal(modal) {
-  modal.classList.add("modal_opened");
-  document.addEventListener("keydown", closeModalByPressingESC);
-}
-
-function closeModal(modal) {
-  modal.classList.remove("modal_opened");
-  document.removeEventListener("keydown", closeModalByPressingESC);
-}
-
 function closeModalByPressingESC(evt) {
   if (evt.key === "Escape") {
     const modal = document.querySelector(".modal_opened");
@@ -121,7 +111,19 @@ function closeModalByPressingESC(evt) {
 }
 
 function closeModalByOverlay(evt) {
-  closeModal(evt.target);
+  if (evt.target === evt.currentTarget) {
+    closeModal(evt.target);
+  }
+}
+
+function openModal(modal) {
+  modal.classList.add("modal_opened");
+  document.addEventListener("keydown", closeModalByPressingESC);
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", closeModalByPressingESC);
 }
 
 profileEditButton.addEventListener("click", () => {

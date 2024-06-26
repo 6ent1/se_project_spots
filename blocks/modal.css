@@ -162,6 +162,7 @@
 
 .modal__submit-btn_type-disabled {
   opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media screen and (max-width: 910px) {

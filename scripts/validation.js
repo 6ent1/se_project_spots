@@ -1,7 +1,8 @@
-const showInputError = (formEl, inputEl, errorMsg) => {
+const showInputError = (formEl, inputEl, { inputErrorClass, errorClass }) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
-  errorMsgEl.textContent = errorMsg;
-  inputEl.classList.add("modal__input_type_error");
+  errorMsgEl.classList.add(errorClass);
+  errorMsgEl.textContent = inputEl.validationMessage;
+  inputEl.classList.add(inputErrorClass);
 };
 
 const hideInputError = (formEl, inputEl) => {
@@ -24,12 +25,12 @@ const hasInvalidInput = (inputList) => {
   });
 };
 
-const toggleButtonState = (inputList, buttonEl) => {
+const toggleButtonState = (inputList, buttonEl, config) => {
   if (hasInvalidInput(inputList)) {
     disableButton(buttonEl);
   } else {
     buttonEl.disabled = false;
-    buttonEl.classList.remove("modal__submit-btn_type-disabled");
+    buttonEl.classList.remove(config.inactiveButtonClass);
   }
 };
 
@@ -44,34 +45,34 @@ const resetValidation = (formEl, inputList) => {
   });
 };
 
-const setEventListeners = (formEl) => {
-  const inputList = Array.from(formEl.querySelectorAll(".modal__input"));
-  const buttonElement = formEl.querySelector(".modal__submit-btn");
+const setEventListeners = (formEl, config) => {
+  const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
+  const buttonElement = formEl.querySelector(config.submitButtonSelector);
 
   toggleButtonState(inputList, buttonElement);
 
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
       checkInputValidity(formEl, inputElement);
-      toggleButtonState(inputList, buttonElement);
+      toggleButtonState(inputList, buttonElement, config);
     });
   });
 };
 
-const enableValidation = () => {
-  const formList = document.querySelectorAll(".modal__form");
+const enableValidation = (config) => {
+  const formList = document.querySelectorAll(config.formSelector);
   formList.forEach((formEl) => {
-    setEventListeners(formEl);
+    setEventListeners(formEl, config);
   });
 };
 
-const settings = {
+const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
-  submitButtonSelector: ".modal__button",
-  inactiveButtonClass: "modal__button_disabled",
+  submitButtonSelector: ".modal__submit-btn",
+  inactiveButtonClass: "modal__submit-btn_type-disabled",
   inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error_visible",
+  errorClass: "modal__error",
 };
 
-enableValidation(settings);
+enableValidation(config);
