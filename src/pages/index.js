@@ -7,9 +7,7 @@ import {
   resetValidation,
 } from "../scripts/validation.js";
 
-import { data } from "autoprefixer";
 import Api from "../utils/Api.js";
-import { initialCards } from "../utils/constants.js";
 
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
@@ -18,8 +16,6 @@ const api = new Api({
     "Content-Type": "application/json",
   },
 });
-
-//api.getInitialCards().then((cards) => {});
 
 api
   .getAppInfo()
@@ -103,10 +99,9 @@ function getCardElement(data) {
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
-
-  // if (data.isLiked) {
-  //   data.cardLikeBtn.classList.add("card__like-button_liked");
-  // }
+  if (data.isLiked) {
+    cardLikeBtn.classList.add("card__like-button_liked");
+  }
 
   cardLikeBtn.addEventListener("click", (evt) => handleLike(evt, data._id));
 
@@ -126,11 +121,8 @@ function getCardElement(data) {
 }
 
 function handleLike(evt, id) {
-  // evt.cardLikeBtn.classList.toggle("card__like-button_liked");
-  console.log(evt);
-  // const isLiked = evt.currentTarget.classList.contains(
-  //   "card__like-button_liked"
-  // );
+  console.log(id);
+  const isLiked = evt.target.classList.contains("card__like-button_liked");
   api
     .handleLike(id, isLiked)
     .then(() => {
@@ -255,8 +247,8 @@ function handleAvatarSubmit(evt) {
     .then((data) => {
       console.log(data.avatar);
       profileAvatarImage.src = data.avatar;
+      closeModal(avatarModal);
     })
-    .catch(console.error)
     .catch(console.error)
     .finally(() => {
       submitBtn.textContent = "Save";

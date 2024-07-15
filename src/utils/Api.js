@@ -104,9 +104,8 @@ export default class Api {
   }
 
   handleLike(id, isLiked) {
-    const method = isLiked ? "DELETE" : "PUT";
     return fetch(`${this._baseUrl}/cards/${id}/likes`, {
-      method: method,
+      method: isLiked ? "DELETE" : "PUT",
       headers: this._headers,
     }).then((res) => {
       if (res.ok) {
