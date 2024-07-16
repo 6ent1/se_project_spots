@@ -159,6 +159,54 @@
   cursor: not-allowed;
 }
 
+.modal__delete-btn {
+  background-color: rgba(255, 101, 101, 1);
+  color: rgba(33, 33, 33, 1);
+  cursor: pointer;
+  border-radius: 8px;
+  height: 52px;
+  width: 157px;
+  padding: 18px 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  border: 1px solid rgba(255, 101, 101, 1);
+}
+
+.modal__delete-btn:hover {
+  background-color: rgba(255, 51, 51, 1);
+  border: 1px solid rgba(255, 51, 51, 1);
+}
+
+.modal__cancel-btn {
+  cursor: pointer;
+  border-radius: 8px;
+  height: 52px;
+  width: 156px;
+  background-color: #fff;
+  color: rgba(33, 33, 33, 1);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  padding: 18px 32px;
+  border: 1px solid rgba(33, 33, 33, 1);
+}
+
+.modal__cancel-btn:hover {
+  background-color: rgba(33, 33, 33, 1);
+  color: #fff;
+}
+
+.delete__image-btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 @media screen and (max-width: 910px) {
   .modal__image {
     object-fit: cover;
