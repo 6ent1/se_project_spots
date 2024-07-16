@@ -21,13 +21,13 @@ api
   .getAppInfo()
   .then(([cards, userInfo]) => {
     cards.forEach((item) => {
-      console.log(cards);
+      //console.log(cards);
       const cardElement = getCardElement(item);
       cardsList.prepend(cardElement);
     });
 
     //const data = userInfo;
-    console.log(userInfo);
+    //console.log(userInfo);
     profileName.textContent = userInfo.name;
     profileDescription.textContent = userInfo.about;
 
@@ -255,12 +255,11 @@ function handleAvatarSubmit(evt) {
     });
 }
 
-function addCardsToServer(evt) {
-  evt.preventDefault();
+function addCardsToServer(evt, inputValues) {
   const submitBtn = evt.submitter;
   submitBtn.textContent = "Saving...";
   api
-    .addCards({ name: cardNameInput.value, link: cardLinkInput.value })
+    .addCards(inputValues)
     .then((data) => {
       console.log(data);
       closeModal(cardModal);
@@ -277,7 +276,7 @@ function handleCardFormSubmit(evt) {
   const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-  addCardsToServer(inputValues);
+  addCardsToServer(evt, inputValues);
   disableButton(cardSubmitButton, config);
   closeModal(cardModal);
   evt.target.reset();
