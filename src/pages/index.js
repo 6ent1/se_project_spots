@@ -23,7 +23,7 @@ api
     cards.forEach((item) => {
       //console.log(cards);
       const cardElement = getCardElement(item);
-      cardsList.prepend(cardElement);
+      cardsList.append(cardElement);
     });
 
     //const data = userInfo;
