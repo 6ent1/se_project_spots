@@ -72,6 +72,10 @@ const avatarInput = avatarModal.querySelector("#profile-avatar-input");
 // Delete Form Elements
 const deleteModal = document.querySelector("#delete-modal");
 const deleteForm = deleteModal.querySelector(".modal__form");
+const deleteModalCloseBtn = deleteModal.querySelector(
+  ".modal__close-btn_type_preview"
+);
+const deleteModalCancelBtn = deleteModal.querySelector(".modal__cancel-btn");
 
 // Preview Form Elements
 const previewModal = document.querySelector("#preview-modal");
@@ -216,6 +220,14 @@ previewModalCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
+deleteModalCloseBtn.addEventListener("click", () => {
+  closeModal(deleteModal);
+});
+
+deleteModalCancelBtn.addEventListener("click", () => {
+  closeModal(deleteModal);
+});
+
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
 
@@ -255,37 +267,31 @@ function handleAvatarSubmit(evt) {
     });
 }
 
-function addCardsToServer(evt, inputValues) {
+function handleCardFormSubmit(evt) {
+  evt.preventDefault();
+  const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
   const submitBtn = evt.submitter;
   submitBtn.textContent = "Saving...";
   api
     .addCards(inputValues)
     .then((data) => {
       console.log(data);
+      const cardElement = getCardElement(data);
+      cardsList.prepend(cardElement);
       closeModal(cardModal);
+      //addCardsToServer(evt, inputValues);
+      disableButton(cardSubmitButton, config);
+      evt.target.reset();
     })
-    .catch(console.error)
     .catch(console.error)
     .finally(() => {
       submitBtn.textContent = "Save";
     });
 }
 
-function handleCardFormSubmit(evt) {
-  evt.preventDefault();
-  const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
-  const cardElement = getCardElement(inputValues);
-  cardsList.prepend(cardElement);
-  addCardsToServer(evt, inputValues);
-  disableButton(cardSubmitButton, config);
-  closeModal(cardModal);
-  evt.target.reset();
-}
-
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardFormElement.addEventListener("submit", handleCardFormSubmit);
 avatarFormElement.addEventListener("submit", handleAvatarSubmit);
 deleteForm.addEventListener("submit", handleDeleteSubmit);
-cardFormElement.addEventListener("submit", addCardsToServer);
 
 enableValidation(config);
